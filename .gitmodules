@@ -1,3 +1,6 @@
 [submodule "chibios"]
 	path = chibios
 	url = https://github.com/Phoenixreturn/ChibiOS
+[submodule "ugfx"]
+	path = ugfx
+	url = https://github.com/Phoenixreturn/ugfx
