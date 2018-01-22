@@ -10,7 +10,7 @@
 
 #include "gfx.h"
 #include "src/gfile/gfile_fs.h"
-#include "../../../3rdparty/fatfs-0.13/source/ff.h"
+#include "3rdparty/fatfs-0.13/source/ff.h"
 
 GFILE* readUgfxFile(char *name);
 FRESULT formatQuadFlash();

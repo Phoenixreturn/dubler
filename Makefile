@@ -13,9 +13,9 @@
 
 # uGFX settings
 	# See $(GFXLIB)/tools/gmake_scripts/library_ugfx.mk for the list of variables
-	GFXLIB					= ../../ugfx
+	GFXLIB					= ./ugfx
 	GFXBOARD				= STM32F746-Discovery
-	GFXDEMO					=
+	GFXDEMO					= ./dashboard
 	#GFXDEMO					= modules/gdisp/basics
 	#GFXDRIVERS				=
 	GFXSINGLEMAKE			= no
@@ -23,7 +23,7 @@
 # ChibiOS settings
 ifeq ($(OPT_OS),chibios)
 	# See $(GFXLIB)/tools/gmake_scripts/os_chibios_3.mk for the list of variables
-	CHIBIOS					= ../../ChibiOS161
+	CHIBIOS					= ./chibios
 	CHIBIOS_VERSION			= 16
 	CHIBIOS_CPUCLASS		= ARMCMx
 	CHIBIOS_PLATFORM		= STM32
@@ -62,7 +62,7 @@ OBJS     =
 DEFS     =
 #DEFS     = GFX_OS_HEAP_SIZE=40960
 LIBS     =
-INCPATH  =   
+INCPATH  =  
 
 LIBPATH  =
 LDSCRIPT = 
