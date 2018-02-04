@@ -15,7 +15,7 @@
 	# See $(GFXLIB)/tools/gmake_scripts/library_ugfx.mk for the list of variables
 	GFXLIB					= ./ugfx
 	GFXBOARD				= STM32F746-Discovery
-	GFXDEMO					= ./dashboard
+	GFXDEMO					= ./measuring_modbus
 	#GFXDEMO					= modules/gdisp/basics
 	#GFXDRIVERS				=
 	GFXSINGLEMAKE			= no
@@ -56,13 +56,13 @@ CXXFLAGS = -fno-rtti
 ASFLAGS  =
 LDFLAGS  = -lm -specs=nosys.specs
 
-SRC      = 
+SRC      = $(CHIBIOS)/os/various/evtimer.c
 
 OBJS     =
 DEFS     =
 #DEFS     = GFX_OS_HEAP_SIZE=40960
 LIBS     =
-INCPATH  =  
+INCPATH  = $(CHIBIOS)/os/various
 
 LIBPATH  =
 LDSCRIPT = 
@@ -70,7 +70,7 @@ LDSCRIPT =
 ##############################################################################################
 # These should be at the end
 #
-
+include $(CHIBIOS)/os/various/lwip_bindings/lwip.mk
 include $(GFXLIB)/tools/gmake_scripts/library_ugfx.mk
 include $(GFXLIB)/tools/gmake_scripts/os_$(OPT_OS).mk
 include $(GFXLIB)/tools/gmake_scripts/compiler_gcc.mk
